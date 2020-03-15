@@ -1,0 +1,20 @@
+{
+  "name": "slack-app",
+  "version": "1.0.0",
+  "description": "This project make something cool with slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duysmile/slack-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duysmile/slack-app/issues"
+  },
+  "homepage": "https://github.com/duysmile/slack-app#readme"
+}
