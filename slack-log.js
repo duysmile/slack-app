@@ -9,7 +9,6 @@ class SlackLog {
   handleRequest(message) {
     return service.sendMessage(this.channel, this.token, message)
       .then(result => {
-        console.log(result);
         if (result.ok === false) {
           throw new Error(result.error);
         }
@@ -19,15 +18,21 @@ class SlackLog {
   }
 
   sendError(message) {
-    return this.handleRequest(message);
+    return this.handleRequest(`
+      \`ERROR\`: ${message}
+    `);
   }
 
   sendWarning(message) {
-
+    return this.handleRequest(`
+      *WARNING*: ${message}
+    `);
   }
 
   sendInfo(message) {
-
+    return this.handleRequest(`
+      _INFO_: ${message}
+    `);
   }
 
 }
